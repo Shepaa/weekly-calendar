@@ -1,0 +1,70 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Node modules
+node_modules/
+
+# Build output
+/dist/
+/build/
+
+# Vite cache
+/.vite/
+
+# Coverage
+/coverage/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Local env files
+.env.local
+.env.*.local
+# (Keep .env, .env.production etc. committed only if intended)
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Remote mounts
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Optional: lock files (uncomment if you prefer ignoring lockfiles)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# IDE specific (JetBrains)
+# If you use runConfigurations intentionally, comment out the line below
+# .idea/runConfigurations/
+
+# Misc
+*.local
