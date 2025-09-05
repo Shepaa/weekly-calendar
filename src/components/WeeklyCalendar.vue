@@ -39,6 +39,8 @@
             <div class="font-semibold capitalize text-gray-800">{{ dayNames[dayKey] }}</div>
             <button
                 class="text-xs px-2 py-1 border rounded-md bg-white hover:bg-gray-100 active:bg-gray-200 transition"
+                @mousedown.stop.prevent
+                @mouseup.stop.prevent
                 @click.stop="toggleAllDay(dayIndex)"
             >
               All Day
@@ -121,10 +123,6 @@ function isSelected(d, h) {
   return selected[d][h]
 }
 
-function toggleSlot(d, h) {
-  selected[d][h] = !selected[d][h]
-  emitSchedule()
-}
 
 const dragging = ref(false)
 const dragMode = ref('select') // or 'clear'
@@ -158,11 +156,6 @@ function isDayFullySelected(d) {
 
 function setDay(d, value) {
   for (let h = 0; h < 24; h++) selected[d][h] = value
-}
-
-function toggleDay(d) {
-  setDay(d, !isDayFullySelected(d))
-  emitSchedule()
 }
 
 function startDayDrag(d) {
